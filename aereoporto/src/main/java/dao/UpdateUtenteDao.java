@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import resource.DBconn;
 
 import java.io.IOException;
-import java.net.ConnectException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -59,7 +58,7 @@ public class UpdateUtenteDao extends HttpServlet {
 			String data = request.getParameter("date");
 			String destinazione = request.getParameter("destination");
 
-			String sql = "INSERT INTO prenotazioni (nome, cognome, email, telefono, numeroVolo, data, destinazione) VALUES (?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO prenotazioni (firstName, lastName, email, phone, flightNumber, date, destination) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 			PreparedStatement ps = aggiungi.prepareStatement(sql);
 			ps.setString(1, nome);

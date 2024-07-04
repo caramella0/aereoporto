@@ -11,14 +11,14 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Aeroporto</a>
+    <a class="navbar-brand" href="Index.jsp">Aeroporto</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="Index.jsp">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="UpdateUtente.jsp">Prenota</a>
@@ -38,41 +38,52 @@
     <div class="card mt-4">
       <div class="card-header">Prenota un volo</div>
       <div class="card-body">
-        <form action="processBooking.jsp" method="post">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="firstName">Nome</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Inserisci il tuo nome">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="lastName">Cognome</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Inserisci il tuo cognome">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua email">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="phone">Telefono</label>
-              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Inserisci il tuo numero di telefono">
-            </div>
+        <form>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome">
           </div>
           <div class="form-group">
             <label for="flightNumber">Numero del Volo</label>
-            <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Inserisci il numero del volo">
+            <input type="text" class="form-control" id="flightNumber" placeholder="Inserisci il numero del volo">
           </div>
           <div class="form-group">
-            <label for="date">Data del Volo</label>
-            <input type="date" class="form-control" id="date" name="date">
-          </div>
-          <div class="form-group">
-            <label for="destination">Destinazione</label>
-            <input type="text" class="form-control" id="destination" name="destination" placeholder="Inserisci la destinazione">
+            <label for="date">Data</label>
+            <input type="date" class="form-control" id="date">
           </div>
           <button type="submit" class="btn btn-primary">Prenota</button>
         </form>
+      </div>
+    </div>
+
+    <!-- Tabella Prenotazioni -->
+    <div class="card mt-4">
+      <div class="card-header">Prenotazioni esistenti</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Numero del Volo</th>
+              <th>Data</th>
+              <th>Azioni</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mario Rossi</td>
+              <td>AZ1234</td>
+              <td>2024-07-01</td>
+              <td><button class="btn btn-danger btn-sm">Cancella</button></td>
+            </tr>
+            <tr>
+              <td>Giulia Bianchi</td>
+              <td>BA5678</td>
+              <td>2024-07-02</td>
+              <td><button class="btn btn-danger btn-sm">Cancella</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
