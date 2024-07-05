@@ -58,7 +58,7 @@ public class UpdateUtenteDao extends HttpServlet {
 			String data = request.getParameter("date");
 			String destinazione = request.getParameter("destination");
 
-			String sql = "INSERT INTO prenotazioni (firstName, lastName, email, phone, flightNumber, date, destination) VALUES (?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO aereo (firstName, lastName, email, phone, flightNumber, date, destination) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 			PreparedStatement ps = aggiungi.prepareStatement(sql);
 			ps.setString(1, nome);
