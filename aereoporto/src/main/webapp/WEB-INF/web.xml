@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CaricaUtenteServlet</display-name>
+    <servlet-name>CaricaUtenteServlet</servlet-name>
+    <servlet-class>controller.CaricaUtenteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CaricaUtenteServlet</servlet-name>
+    <url-pattern>/CaricaUtenteServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

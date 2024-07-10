@@ -21,7 +21,7 @@ public class DBconn {
                 dataSource.setPassword("root");
                 dataSource.setUser("root");
                 dataSource.setDatabaseName("aereo");
-
+                dataSource.setServerTimezone("UTC");
                 connessione = dataSource.getConnection();
                 System.out.println("Connessione al database stabilita con successo.");
             }
