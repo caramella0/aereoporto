@@ -13,10 +13,6 @@ import java.sql.SQLException;
 
 import dao.CaricaUtenteDao;
 
-/**
- * Servlet implementation class CaricaUtenteServlet
- */
-
 @WebServlet("/UpdateUtente")
 public class CaricaUtenteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
