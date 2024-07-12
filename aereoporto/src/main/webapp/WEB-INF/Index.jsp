@@ -34,7 +34,7 @@
 
 	<!-- Main Content -->
 	<div class="container mt-5">
-		<h1 class="text-center">Prenotazioni Aeroporto</h1>
+		<h1 class="text-center">Prenotazioni </h1>
 
 		<!-- Form di Prenotazione -->
 		<div class="card mt-4">
@@ -66,6 +66,29 @@
 			<div class="card-body">
 				<table class="table table-bordered">
 					<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Numero del Volo</th>
+					<th>Data</th>
+					<th>Azioni</th>
+				</tr>
+				<c:forEach var="Passeggero" items="${listaTuttiPasseggero}">
+					<tr>
+						<td><c:out value="${passeggero.name}" /></td>
+						<td><c:out value="${passeggero.flightNumber}" /></td>
+						<td><c:out value="${book.author}" /></td>
+						<td><a class="btn btn-danger btn-sm"href="/edit?id=<c:out value='${book.id}' />">Edit</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							 <a class="btn btn-danger btn-sm" href="/delete?id=<c:out value='${book.id}' />">Delete</a></td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
+		<!-- 		<div class="card mt-4">
+			<div class="card-header">Prenotazioni esistenti</div>
+			<div class="card-body">
+				<table class="table table-bordered">
+					<thead>
 						<tr>
 							<th>Nome</th>
 							<th>Numero del Volo</th>
@@ -89,7 +112,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 	<!-- Scripts -->

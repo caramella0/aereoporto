@@ -8,6 +8,7 @@ public class Passeggero implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -15,6 +16,29 @@ public class Passeggero implements Serializable {
 	private String flightNumber;
 	private String date;
 	private String destination;
+
+	public Passeggero(String firstName, String flightNumber) {
+		super();
+		this.firstName = firstName;
+		this.flightNumber = flightNumber;
+	}
+
+	public Passeggero(int id, String firstName, String lastName, String email, String phone, String flightNumber,
+			String date, String destination) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phone = phone;
+		this.flightNumber = flightNumber;
+		this.date = date;
+		this.destination = destination;
+	}
+
+	public Passeggero() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -70,5 +94,13 @@ public class Passeggero implements Serializable {
 
 	public void setDestination(String destination) {
 		this.destination = destination;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
